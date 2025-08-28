@@ -1,14 +1,19 @@
 import sys
 from pathlib import Path
+
+# Set up Python path for Vercel
+current_dir = Path(__file__).parent
+src_dir = current_dir.parent / "src"
+print(f"Vercel boot: current_dir={current_dir}, src_dir={src_dir}")
+if src_dir.exists():
+    sys.path.insert(0, str(src_dir))
+    print(f"sys.path updated: {sys.path}")
+else:
+    print("src directory does not exist!")
+
 from fastapi import FastAPI
 from pydantic import BaseModel
 from mangum import Mangum
-
-# Add the src directory to Python path for Vercel
-current_dir = Path(__file__).parent
-src_dir = current_dir.parent / "src"
-if src_dir.exists():
-    sys.path.insert(0, str(src_dir))
 
 try:
     from soinglobal_smartai.crew import SoinglobalSmartai
