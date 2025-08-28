@@ -1,0 +1,25 @@
+[project]
+name = "soinglobal_smartai"
+version = "0.1.0"
+description = "SOINGLOBAL_SmartAI using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.140.0,<1.0.0",
+    "pymongo>=4.0.0",
+    "requests>=2.25.0",
+]
+
+[project.scripts]
+soinglobal_smartai = "soinglobal_smartai.main:run"
+run_crew = "soinglobal_smartai.main:run"
+train = "soinglobal_smartai.main:train"
+replay = "soinglobal_smartai.main:replay"
+test = "soinglobal_smartai.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

@@ -1,0 +1,4 @@
+chatbot_query_task:
+  description: "Research and analyze data about DEX screener tokens and their promotion in Telegram groups, providing insights on whether activity is organic or driven by promoters."
+  expected_output: "A clear, data-driven answer explaining if the token is being promoted by Telegram groups and how it affects trading activity."
+  agent: researcher

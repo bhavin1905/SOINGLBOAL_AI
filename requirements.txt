@@ -1,0 +1,4 @@
+fastapi
+pydantic
+uvicorn
+# Add any other dependencies your app needs below
