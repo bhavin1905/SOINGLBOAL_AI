@@ -2,3 +2,5 @@ fastapi
 pydantic
 uvicorn
 # Add any other dependencies your app needs below
+SOINGLBOAL_AI
+mangum

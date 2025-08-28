@@ -2,6 +2,7 @@ import sys
 from pathlib import Path
 from fastapi import FastAPI
 from pydantic import BaseModel
+from mangum import Mangum
 
 # Add the src directory to Python path for Vercel
 current_dir = Path(__file__).parent
@@ -17,6 +18,7 @@ except ImportError as e:
     CREW_AVAILABLE = False
 
 app = FastAPI(title="Soinglobal SmartAI Crew API")
+handler = Mangum(app)
 
 
 class CrewRequest(BaseModel):
